@@ -36,7 +36,7 @@
 	import tokenSimulation from 'bpmn-js-token-simulation/lib/viewer'
 	import fileLoader from '../components/Editor/fileLoader.vue'
 	//引入一个Bpmn模板
-	import Sample from '../bpmn/samples/xmlStr-simulation.js'
+	import Sample from '../bpmn/samples/xmlStr-bpmnSample.js'
 
 
 	export default {

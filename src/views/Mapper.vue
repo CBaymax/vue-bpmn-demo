@@ -1,7 +1,7 @@
 <template>
 	<div id="mapper">
 		<el-container>
-			<el-aside width="200px">
+			<!-- <el-aside width="200px">
 				<el-col :span="12">
 					<h5>侧边栏</h5>
 					<el-menu default-active="0" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
@@ -37,13 +37,24 @@
 						</el-menu-item>
 					</el-menu>
 				</el-col>
-			</el-aside>
+			</el-aside> -->
 			<el-main>
-				<el-carousel :interval="4000" type="card" height="200px">
+				<iframe :src="'http://argo-ui-test.apps.buaasz.org/workflows'"  width="100%" height="600"/>
+				<!-- <div align="center" style="margin:0 auto;">
+
+				<div style="width:800px;height:600px;overflow:hidden;border:0px"> 
+					<div style="width:500px;height:800px;margin:-153px 0px 0px -10px;">
+						<iFrame src="http://www.baidu.com" width="800" height="600" scrolling="no">
+						</iFrame>
+					</div> 
+				</div> 
+				</div>  -->
+
+				<!-- <el-carousel :interval="4000" type="card" height="200px">
 					<el-carousel-item v-for="item in 6" :key="item">
 						<h3 class="medium">{{ item }}</h3>
 					</el-carousel-item>
-				</el-carousel>
+				</el-carousel> -->
 			</el-main>
 		</el-container>
 	</div>
@@ -51,6 +62,11 @@
 
 <script>
 	export default {
+		data() {
+			return {
+				
+			}
+		},
 		methods: {
 			handleOpen(key, keyPath) {
 				console.log(key, keyPath);
@@ -63,6 +79,14 @@
 </script>
 
 <style>
+#mapper .el-container {
+  position: fixed;
+  margin: auto;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 90%;
+}
 	.el-carousel__item h3 {
 		color: #475669;
 		font-size: 14px;
